@@ -2,6 +2,8 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';    
 import connectDB from './config/db.js';
+import swaggerUi from "swagger-ui-express";
+import swaggerSpecs from "./docs/swagger.js";
 
 import usersRouter from './routes/users.router.js';
 import petsRouter from './routes/pets.router.js';
@@ -24,5 +26,6 @@ app.use('/api/pets',petsRouter);
 app.use('/api/adoptions',adoptionsRouter);
 app.use('/api/sessions',sessionsRouter);
 app.use('/api/mocks', mocksRouter);
+app.use("/apidocs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
-app.listen(PORT,()=>console.log(`Listening on ${PORT}`))
+export default app;

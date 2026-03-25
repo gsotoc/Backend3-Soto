@@ -4,7 +4,7 @@ import { generateUserMocks, generatePetMocks, generateDataMocks } from "../contr
 const router = Router();
 
 router.get('/mockingusers', generateUserMocks);
-router.get('/mockingpets/:num', generatePetMocks);
+router.get('/mockingpets', generatePetMocks);
 
 router.post('/generateData', generateDataMocks);
 

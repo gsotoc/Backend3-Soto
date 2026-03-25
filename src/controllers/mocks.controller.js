@@ -47,20 +47,3 @@ export const generateDataMocks = async (req, res) => {
     })
 };
 
-//Genera la cantidad de usuario y mascotas que se le indique, y devuelve los usuarios con sus mascotas
-// export const generateDataMocks = async (req, res) => {
-//     const { users, pets } = req.body; 
-//     const usersCount = parseInt(users);  
-//     const petCount = parseInt(pets);
-    
-//     const createdUsers = await generateRandomUsersWithPets(usersCount, petCount);
-
-//     const populatedUsers = await userModel.find({
-//         _id: { $in: createdUsers.map(u => u._id) }
-//     }).populate("pets");
-
-//     res.json({
-//         status: "success",
-//         payload: populatedUsers
-//     });
-// };
