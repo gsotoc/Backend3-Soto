@@ -78,6 +78,10 @@ Con el servidor corriendo, acceder a:
 http://localhost:3000/apidocs
 ```
 
+## Tests Funcionales
+
+Para correr los tests es necesario levantar el proyecto y en bash acceder a la carpeta raiz y correct "npm test"
+
 ## Imagen en Docker Hub
 
 🐳 [gsotoc1891/backend3](https://hub.docker.com/r/gsotoc1891/backend3)
